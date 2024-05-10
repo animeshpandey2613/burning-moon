@@ -1,0 +1,11 @@
+.VideoAreacontainer{
+    width: 100vw;
+    color: white;
+}
+.videoContainer{
+    width: 100vw;
+    position: relative;
+}
+.VideoAdjust{
+    top:100px;
+}

@@ -1,0 +1,45 @@
+.CustomisedPlayercontrols {
+  position: absolute;
+  top: 620px;
+  width: 100vw;
+  display: flex;
+  color: white;
+  justify-content: space-around;
+  transition: 500ms;
+}
+.CustomisedPlayerplay {
+  font-size: 25px;
+  cursor: pointer;
+  transition: 300ms;
+  color: rgb(180, 182, 184);
+  &:hover {
+    transform: scale(1.1);
+    color: white;
+  }
+}
+.CustomisedPlayerRange {
+  width: 80vw;
+}
+.CustomisedPlayertimeline {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.CustomisedPlayerOverlay {
+  width: 100vw;
+  height: 670px;
+  position: absolute;
+  top: 0;
+  transition: 700ms;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 33%,
+    rgba(0, 0, 0, 0) 66%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}

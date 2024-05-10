@@ -1,0 +1,33 @@
+.FrontRowArea:nth-child(1) {
+  transform: translateY(-1130px) translateX(430px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(2) {
+  transform: translateY(-980px) translateX(380px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(3) {
+  transform: translateY(-600px) translateX(100px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(4) {
+  transform: translateY(-200px) translateX(-200px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(5) {
+  transform: translateY(600px) translateX(-900px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(6) {
+  transform: translateY(300px) translateX(-500px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(7) {
+  transform: translateY(-600px) translateX(500px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(8) {
+  transform: translateY(0px) translateX(0px) rotate(-45deg);
+}
+.FrontRowArea:nth-child(9) {
+  transform: translateY(-950px) translateX(770px) rotate(-45deg);
+}
+.FrontContainer{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position:relative;
+}

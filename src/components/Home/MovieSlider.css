@@ -1,0 +1,181 @@
+.MovieSlidercontainer {
+  width: 100vw;
+  position: relative;
+}
+.MovieSliderback {
+  width: 100%;
+  position: relative;
+}
+.MovieSliderGradientLeft {
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.4) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  position: absolute;
+  z-index: 20;
+}
+.MovieSliderData {
+  position: absolute;
+  top: 200px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  display: flex;
+}
+.MovieSliderLeftpart {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+.MovieSliderRightpart {
+  left: 100px;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.MovieSliderContentArea {
+  width: 50%;
+  color: white;
+  font-size: 18px;
+}
+.MovieSliderSmallDisc {
+  display: flex;
+  margin-top: 10px;
+  width: 100%;
+  font-size: 15px;
+  align-items: center;
+  color: white;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+.MovieSlidertemp {
+  margin: 0 10px;
+}
+.MovieSlidertemp2 {
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  margin: 0 10px;
+}
+.MovieSliderMainDescription {
+  margin-top: 15px;
+  color: rgb(203, 203, 203);
+  font-weight: 600;
+}
+.MovieSliderTags {
+  margin-top: 25px;
+}
+.MovieSliderButtonSection {
+  display: flex;
+  width: 500px;
+  align-items: center;
+  margin-top: 25px;
+}
+.MovieSliderPlayButton {
+  display: flex;
+  cursor: pointer;
+  width: 20vw;
+  font-size: 20px;
+  padding: 0.7vw 3vw;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  transition: 300ms;
+  &:hover {
+    transform: scale(1.02);
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+}
+.MovieSliderWishlistButton {
+  padding: 6px;
+  border-radius: 7px;
+  font-size: 40px;
+  cursor: pointer;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.MovieSliderMovieHolder {
+  display: grid;
+  position: relative;
+  transition: 500ms;
+}
+.MovieSliderchunks {
+  margin: 0px 4px;
+  width: 80px;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+  filter: opacity(0.6);
+  cursor: pointer;
+  transition: 400ms;
+  &:hover {
+    filter: opacity(1);
+    transform: scale(1.1);
+  }
+  border-radius: 3px;
+  overflow: hidden;
+}
+.MovieSlideractiveChunk {
+  filter: opacity(1);
+  border: 1px solid white;
+}
+.MovieSliderparent {
+  width: 73%;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  position: relative;
+  bottom: 220px;
+}
+.MovieSliderleft {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.MovieSliderright {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.MovieSliderButton {
+  position: absolute;
+  z-index: 20;
+  color: white;
+  width: 60px;
+  cursor: pointer;
+  height: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.MovieSliderVideoStyle {
+  width: 100vw;
+  top: -100px;
+  position: relative;
+}
+.MovieSliderMuteButton {
+  position: absolute;
+  bottom: 50%;
+  right: 30%;
+  font-size: 25px;
+  color: white;
+  cursor: pointer;
+}

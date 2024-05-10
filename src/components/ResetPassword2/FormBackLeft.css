@@ -1,0 +1,13 @@
+.LeftContainer {
+  color: white;
+  width: 100vw;
+  overflow: hidden;
+  width: 50px;
+}
+.LeftContainer2{
+    position: absolute;
+    width: 100vw;
+    overflow: hidden;
+    right: 0;
+    color: rgb(249, 162, 0);
+}

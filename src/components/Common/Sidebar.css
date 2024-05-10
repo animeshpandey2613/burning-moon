@@ -1,0 +1,79 @@
+.Sidebarmenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  transform: 300ms;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.3)
+  );
+}
+.SidebarGroup {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 450px;
+  align-items: center;
+  margin-top: 150px;
+}
+.SidebarLogo {
+  width: 60px;
+  height: 40px;
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.Sidebarcontainer {
+  max-width: 80px;
+  position: absolute;
+  z-index: 1000;
+  color: white;
+}
+
+.SidebarSlider {
+  width: 250px;
+  position: fixed;
+  left: -250px;
+  top: 0;
+  bottom: 0;
+  transition: 500ms;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.SidebarGroup2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 450px;
+  align-items: flex-end;
+  margin-top: 200px;
+  position: relative;
+  left: -100px;
+}
+.Sidebarpair {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  transition: 500ms;
+  cursor: pointer;
+  &:hover{
+    transform: scale(1.1);
+  }
+}
+.SidebarText {
+  width: 50px;
+}

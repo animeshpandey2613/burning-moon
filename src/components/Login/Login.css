@@ -1,0 +1,232 @@
+.LoginContainer {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  img {
+    height: 300px;
+    object-fit: contain;
+  }
+}
+.Loginback {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    transform: rotate(43deg);
+  }
+}
+.Logingradient {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(255, 136, 0, 0) 25%,
+    rgba(255, 136, 0, 0.2) 50%,
+    rgba(0, 255, 213, 0.2) 50%,
+    rgba(0, 255, 213, 0) 75%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+.Logingradient2 {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  transition: 500ms;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.3) 20%,
+    rgba(0, 0, 0, 1) 40%
+  );
+}
+.Loginbody {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  position: relative;
+  z-index: 50;
+  align-items: center;
+}
+.Loginheading {
+  margin-top: 20px;
+  width: 350px;
+  font-size: 40px;
+
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  position: relative;
+  left: -20px;
+  text-align: center;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.LoginheadLeft {
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(244, 178, 103) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LoginheadRight {
+  background: linear-gradient(
+    210deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(106, 250, 226) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.Logincontent {
+  width: 100%;
+  display: flex;
+  input {
+    color: grey;
+    outline: none;
+  }
+  label {
+    font-size: 20px;
+  }
+}
+.LoginLeftPart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.LoginleftHeading {
+  font-size: 30px;
+  margin-top: 30px;
+  font-weight: 600;
+  font-family: "Orbitron", sans-serif;
+  /*color ke liye*/
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(244, 178, 103) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LoginrightHeading {
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(106, 250, 226) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LoginleftBody {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 60vh;
+}
+.Loginpair {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 50px 0;
+  input {
+    width: 70%;
+    padding: 10px;
+    border-radius: 10px;
+    &:focus {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgb(244, 178, 103) 100%
+      );
+    }
+  }
+}
+.LoginFormDiv {
+  width: 100%;
+}
+.forgotpass {
+  margin-bottom: 15px;
+}
+.LoginbuttonCover {
+  margin-top: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+.LoginButtonLeft {
+  width: 50%;
+  padding: 10px 0;
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  transition: 500ms;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(244, 178, 103) 100%
+  );
+  &:hover {
+    font-size: 22px;
+    background: orange;
+    width: 100%;
+    color: white;
+  }
+}
+.LoginrightPara {
+  font-size: 20px;
+  margin-top: 30px;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(106, 250, 226) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.LoginButtonRight {
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgb(106, 250, 226) 100%
+  );
+  &:hover {
+    font-size: 22px;
+    background: rgb(106, 250, 226);
+    width: 100%;
+    color: white;
+  }
+}
+.LoginMailInput {
+  border: 1px solid black;
+  &::before {
+    border: 1px solid black;
+  }
+}
+.forgotpass {
+  cursor: pointer;
+}
