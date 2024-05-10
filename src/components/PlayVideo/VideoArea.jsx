@@ -6,7 +6,7 @@ import CustomisedPlayer from "./CustomisedPlayer";
 import "./VideoArea.css";
 import MovieItems from "../Common/DetailedMovieItems";
 function VideoArea() {
-  const [CurrentMovie, setCurrentMovie] = useState({ ...MovieItems[0] });
+  const CurrentMovie = { ...MovieItems[0] };
   const [StartMovie, setStartMovie] = useState(false);
   const [WishlistCheck, setWishlistCheck] = useState(false);
   const BackRef = useRef();
