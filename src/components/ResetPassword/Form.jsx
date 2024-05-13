@@ -16,7 +16,7 @@ function Form({ token }) {
       throw new Error("Password must have atleast 8 charactors");
     }
     const res = await axios.patch(
-      `http://127.0.0.1:8000/users/resetpassword/${token}`,
+      `https://main--burningmoonapi.netlify.app/api/users/resetpassword/${token}`,
       data
     );
     if (res.data.status === "sucess") {

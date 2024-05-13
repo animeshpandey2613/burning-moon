@@ -36,7 +36,7 @@ function Login() {
       if (!Data.phoneNumber) {
         return;
       }
-      const resp = await axios.post("http://127.0.0.1:8000/users/signup", Data);
+      const resp = await axios.post("https://main--burningmoonapi.netlify.app/api/users/signup", Data);
       localStorage.setItem("Authentication", resp.data.token);
       setData({
         phoneNumber: null,

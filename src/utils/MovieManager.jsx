@@ -5,7 +5,7 @@ const MovieImporter = async () => {
       authorization: `Bearer ${localStorage.getItem("Authentication")}`,
     },
   };
-  const resp = await axios.get("http://127.0.0.1:8000/movies", config);
+  const resp = await axios.get("https://main--burningmoonapi.netlify.app/api/movies", config);
   //   return resp.
   return resp.data
 };
