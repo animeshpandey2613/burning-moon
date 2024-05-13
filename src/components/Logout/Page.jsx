@@ -1,10 +1,16 @@
-import React from "react";
+import React,{useEffect} from "react";
 import "./page.css";
 import { MdError } from "react-icons/md";
-function page() {
-  if (localStorage.getItem("Authentication")) {
-    localStorage.clear();
-  }
+const Page=()=> {
+  
+  useEffect(() => {
+    // Clear authentication data and prevent going back to this page
+    if (localStorage.getItem("Authentication")) {
+      localStorage.clear();
+    }
+    // Replace current history entry with the login page
+    window.history.replaceState(null, "", "/logout");
+  }, []);
   return (
     <div className="Container">
       <div className="Container2">
@@ -23,4 +29,4 @@ function page() {
   );
 }
 
-export default page;
+export default Page;

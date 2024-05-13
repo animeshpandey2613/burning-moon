@@ -44,7 +44,7 @@ function Login() {
         password: "",
         confirmPassword: "",
       });
-      window.location.href = "/";
+      window.location.href = "/user/home";
     });
 
     if (Data.phoneNumber !== null) {

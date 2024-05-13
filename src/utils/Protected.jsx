@@ -9,7 +9,6 @@ function Protected() {
   const dispatch = useDispatch();
   const [isLoading, setIsLoading] = useState(true);
   const [isSuccess, setIsSuccess] = useState(false);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
