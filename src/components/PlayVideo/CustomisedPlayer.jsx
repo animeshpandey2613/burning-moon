@@ -2,8 +2,9 @@ import React, { useRef, useEffect, useState } from "react";
 import "./CustomisedPlayer.css";
 import { CiPlay1 } from "react-icons/ci";
 import { CiPause1 } from "react-icons/ci";
+import { IoMdArrowRoundBack } from "react-icons/io";
 import "./ArrowDown.css";
-function CustomisedPlayer({ currentMovie }) {
+function CustomisedPlayer({ currentMovie, setStartMovie }) {
   const VideoRef = useRef();
   const overlayRef = useRef();
   const controlsRef = useRef();
@@ -82,6 +83,7 @@ function CustomisedPlayer({ currentMovie }) {
           ref={overlayRef}
           onMouseMove={mouseMovehandler}
         >
+          <div className="CustomisedPlayerBackButton" onClick={()=>setStartMovie(false)}><IoMdArrowRoundBack /></div>
           {playVideo ? <CiPlay1 /> : <CiPause1 />}
 
           <div

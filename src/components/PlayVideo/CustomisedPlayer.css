@@ -43,3 +43,12 @@
     rgba(0, 0, 0, 1) 100%
   );
 }
+.CustomisedPlayerBackButton{
+  position: absolute;
+  left: 50px;
+  top: 50px;
+  font-size: 30px;
+  color: white;
+  z-index: 1000;
+  cursor: pointer;
+}

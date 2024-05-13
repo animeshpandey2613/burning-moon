@@ -31,7 +31,7 @@ function VideoArea() {
       <div className="videoContainer">
         <div className="MovieSliderback" ref={BackRef}>
           {StartMovie ? (
-            <CustomisedPlayer currentMovie={CurrentMovie} />
+            <CustomisedPlayer currentMovie={CurrentMovie} setStartMovie={setStartMovie}/>
           ) : (
             <>
               <div className="MovieSliderGradientLeft" />
@@ -72,7 +72,7 @@ function VideoArea() {
                     className="MovieSliderPlayButton"
                     onClick={() => setStartMovie(true)}
                   >
-                    <BsFillPlayFill /> Subscribe to watch
+                    <BsFillPlayFill /> Watch the movie
                   </div>
                   <div
                     className="MovieSliderWishlistButton"

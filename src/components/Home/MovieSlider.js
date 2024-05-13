@@ -265,7 +265,7 @@ function MovieSlider() {
             <div className="MovieSliderButtonSection">
               <a href="/user/play">
                 <div className="MovieSliderPlayButton">
-                  <BsFillPlayFill /> Subscribe to watch
+                  <BsFillPlayFill /> Watch the movie
                 </div>
               </a>
               <div
