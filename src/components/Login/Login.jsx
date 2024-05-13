@@ -62,7 +62,7 @@ function Login() {
     });
     if (!phoneNumber) throw new Error("Please enter a phone number");
     const res = await axios.post(
-      "https://main--burningmoonapi.netlify.app/users/forgotpassword",
+      "https://main--burningmoonapi.netlify.app/api/users/forgotpassword",
       {
         phoneNumber,
       }
