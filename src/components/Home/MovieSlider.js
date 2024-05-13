@@ -6,15 +6,17 @@ import { IoIosAdd } from "react-icons/io";
 import { IoIosCheckmark } from "react-icons/io";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
-import video from "../../videos/demo.mp4";
 import { useSelector } from "react-redux";
+import { setCurrentMovie } from "../../features/Movie/movieSlice";
+import { useDispatch } from "react-redux";
+
 import "./MovieSlider.css";
 function MovieSlider() {
   const MovieItems = useSelector((state) =>
     state.movies.map((movie, index) => ({ ...movie, index: index + 1 }))
   );
-  console.log(MovieItems);
 
+  const dispatch = useDispatch();
   const [ActiveIndex, setActiveIndex] = useState(0);
   const [FirstIndex, setFirstIndex] = useState(0);
   const [StartMovie, setStartMovie] = useState(false);
@@ -60,6 +62,7 @@ function MovieSlider() {
     const Timeout = setTimeout(() => {
       setStartMovie(true);
     }, 3000);
+    localStorage.setItem("currentMovie", ActiveIndex);
     return () => {
       clearTimeout(Timeout);
     };
@@ -73,6 +76,12 @@ function MovieSlider() {
       clearTimeout(Timeout);
     };
   }, [ActiveIndex]);
+
+  const HandlePlayButton = () => {
+    dispatch(setCurrentMovie(ActiveIndex));
+    window.location.href = "/user/play";
+  };
+
   return (
     <div className="MovieSlidercontainer">
       <div className="MovieSliderSticking">
@@ -83,7 +92,7 @@ function MovieSlider() {
               autoPlay
               muted={Muted && true}
             >
-              <source src={video} type="video/mp4" />
+              <source src={MovieItems[ActiveIndex].video} type="video/mp4" />
             </video>
           ) : (
             <>
@@ -125,11 +134,9 @@ function MovieSlider() {
               {MovieItems[ActiveIndex].tags.join(" | ")}
             </div>
             <div className="MovieSliderButtonSection">
-              <a href="/user/play">
-                <div className="MovieSliderPlayButton">
-                  <BsFillPlayFill /> Watch the movie
-                </div>
-              </a>
+              <div className="MovieSliderPlayButton" onClick={HandlePlayButton}>
+                <BsFillPlayFill /> Watch the movie
+              </div>
               <div
                 className="MovieSliderWishlistButton"
                 onClick={() => setWishlistCheck(!WishlistCheck)}

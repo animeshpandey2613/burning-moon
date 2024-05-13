@@ -4,9 +4,13 @@ import { IoIosAdd } from "react-icons/io";
 import { IoIosCheckmark } from "react-icons/io";
 import CustomisedPlayer from "./CustomisedPlayer";
 import "./VideoArea.css";
-import MovieItems from "../Common/DetailedMovieItems";
+import { useSelector } from "react-redux";
 function VideoArea() {
-  const CurrentMovie = { ...MovieItems[0] };
+  const index = localStorage.getItem("currentMovie");
+  const MovieItems = useSelector((state) =>
+    state.movies.map((movie, index) => ({ ...movie, index: index + 1 }))
+  );
+  const CurrentMovie = { ...MovieItems[index] };
   const [StartMovie, setStartMovie] = useState(false);
   const [WishlistCheck, setWishlistCheck] = useState(false);
   const BackRef = useRef();
@@ -31,12 +35,15 @@ function VideoArea() {
       <div className="videoContainer">
         <div className="MovieSliderback" ref={BackRef}>
           {StartMovie ? (
-            <CustomisedPlayer currentMovie={CurrentMovie} setStartMovie={setStartMovie}/>
+            <CustomisedPlayer
+              currentMovie={CurrentMovie}
+              setStartMovie={setStartMovie}
+            />
           ) : (
             <>
               <div className="MovieSliderGradientLeft" />
               <img
-                src={CurrentMovie.link}
+                src={CurrentMovie.landscapeImage}
                 alt="asdfg"
                 className="MovieSliderBackImg"
               />
@@ -54,11 +61,11 @@ function VideoArea() {
                   <div className="MovieSlidertemp">{CurrentMovie.duration}</div>
                   {"•"}
                   <div className="MovieSlidertemp">
-                    {CurrentMovie.language.length} languages
+                    {CurrentMovie.languages.length} languages
                   </div>
                   {"•"}
                   <div className="MovieSlidertemp2">
-                    {CurrentMovie.restrictions}
+                    {CurrentMovie.restricions}
                   </div>
                 </div>
                 <div className="MovieSliderMainDescription">
@@ -72,7 +79,7 @@ function VideoArea() {
                     className="MovieSliderPlayButton"
                     onClick={() => setStartMovie(true)}
                   >
-                    <BsFillPlayFill /> Watch the movie
+                    <BsFillPlayFill /> Start from beginning
                   </div>
                   <div
                     className="MovieSliderWishlistButton"

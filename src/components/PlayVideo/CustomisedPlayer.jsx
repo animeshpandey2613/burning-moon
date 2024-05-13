@@ -72,7 +72,10 @@ function CustomisedPlayer({ currentMovie, setStartMovie }) {
     <>
       <div>
         <video className="MovieSliderVideoStyle" autoPlay ref={VideoRef}>
-          <source src={currentMovie.video} type="video/mp4" />
+          <source
+            src={currentMovie.video}
+            type="video/mp4"
+          />
         </video>
         <div
           className="CustomisedPlayerOverlay"
@@ -83,7 +86,12 @@ function CustomisedPlayer({ currentMovie, setStartMovie }) {
           ref={overlayRef}
           onMouseMove={mouseMovehandler}
         >
-          <div className="CustomisedPlayerBackButton" onClick={()=>setStartMovie(false)}><IoMdArrowRoundBack /></div>
+          <div
+            className="CustomisedPlayerBackButton"
+            onClick={() => setStartMovie(false)}
+          >
+            <IoMdArrowRoundBack />
+          </div>
           {playVideo ? <CiPlay1 /> : <CiPause1 />}
 
           <div
