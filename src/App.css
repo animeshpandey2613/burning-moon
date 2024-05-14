@@ -2,6 +2,7 @@ body {
   background-color: rgb(10, 11, 15);
   margin: 0;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 .SearchContainer {
   width: 100vw;
