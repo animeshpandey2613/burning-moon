@@ -24,7 +24,8 @@ function App() {
           return matches ? (
             <h2 className="heading2">
               Mobile version of this site is under construction, please open it
-              on your PC
+              on your PC OR visit my linkedIn profile -
+              https://www.linkedin.com/in/animesh-pandey-00a3bb228/
             </h2>
           ) : (
             <Router>
