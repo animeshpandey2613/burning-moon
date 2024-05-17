@@ -10,7 +10,7 @@ import ResetPassword from "./pages/ResetPassword";
 import Protected from "./utils/Protected";
 import Logout from "./pages/Logout";
 import { Helmet } from "react-helmet";
-import Media from "react-media";
+// import Media from "react-media";
 import Logo from "./images/Logo.png";
 function App() {
   return (
