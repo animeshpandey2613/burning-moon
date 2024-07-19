@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Logout from "../pages/Logout";
+import Login from "../pages/Login"
 import { MovieImporter } from "./MovieManager";
 import { useDispatch } from "react-redux";
 import { movieInput } from "../features/Movie/movieSlice";
@@ -17,9 +17,13 @@ function Protected() {
         if (data.status === "success") {
           setIsSuccess(true);
         } else {
+          localStorage.removeItem('Authentication');
+          console.log("helllo");
           setIsSuccess(false);
         }
       } catch (error) {
+        localStorage.removeItem('Authentication');
+        console.log("helllo");
         console.error("Error fetching data:", error);
         setIsSuccess(false);
       } finally {
@@ -35,7 +39,7 @@ function Protected() {
   }
 
   if (!isSuccess) {
-    return <Logout />;
+    return <Login />;
   }
 
   return <Outlet />;

@@ -1,6 +1,7 @@
 import React,{useEffect} from "react";
 import "./page.css";
 import { MdError } from "react-icons/md";
+import { Link } from "react-router-dom";
 const Page=()=> {
   
   useEffect(() => {
@@ -18,12 +19,12 @@ const Page=()=> {
           <MdError />
         </div>
         You have been logged out. Please login!
+        <Link to="/login">
         <button
           className="FormButton"
-          onClick={()=>(window.location.href = "/login")}
         >
           Login
-        </button>
+        </button></Link>
       </div>
     </div>
   );

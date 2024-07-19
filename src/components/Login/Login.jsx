@@ -22,7 +22,11 @@ function Login() {
     localStorage.setItem("Authentication", resp.data.token);
     setLoggedIn(true);
   });
-
+  useEffect(()=>{
+    if(localStorage.getItem("Authentication") !== null ){
+      window.location.href = "/user/home"
+    }
+  }, [])
   useEffect(() => {
     if (loggedIn) {
       window.location.href = "/user/home";

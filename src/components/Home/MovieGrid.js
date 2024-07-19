@@ -7,9 +7,10 @@ function MovieGrid({ Catagory, MovieJson }) {
   useEffect(() => {
     if (currentIndex >= 1) setLeftVisibility(true);
     else setLeftVisibility(false);
-    if (currentIndex < MovieJson.length - 8) setRightVisibility(true);
+    if (currentIndex < MovieJson.length - 6) setRightVisibility(true);
     else setRightVisibility(false);
   }, [currentIndex, MovieJson.length]);
+  console.log(MovieJson);
   return (
     <Container>
       {Catagory && <Heading>{Catagory}</Heading>}
@@ -37,7 +38,7 @@ function MovieGrid({ Catagory, MovieJson }) {
             return (
               <Movie>
                 <ImageArea>
-                  <img src={ele.Image} alt="" />
+                  <img src={ele.potraitImage} alt="" />
                 </ImageArea>
                 <PlayButton></PlayButton>
                 <CompletedBar></CompletedBar>
@@ -68,7 +69,7 @@ const MovieArea = styled.div`
   // margin-top: 20px;
   margin-left: 100px;
   width: 90%;
-  height: 280px;
+  height: 320px;
   margin-bottom: 30px;
   overflow: hidden;
 `;
@@ -76,7 +77,8 @@ const SubContainer = styled.div`
   display: flex;
   transform: translateX(-${(ele) => ele.Index * 250}px);
   transition: 400ms;
-  width: ${(ele) => ele.totalMovies * 180}px;
+  width: ${(ele) => ele.totalMovies * 230}px;
+  gap:25px;
   margin-top: 5px;
   justify-content: space-around;
   height: 93%;
@@ -96,7 +98,7 @@ const ImageArea = styled.div`
   img {
     border-radius: 10px;
     height: 100%;
-    object-fit: contain;
+    object-fit: fill;
   }
 `;
 const PlayButton = styled.div``;

@@ -2,6 +2,7 @@ import React, { useState, useRef } from "react";
 import "./Sidebar.css";
 import { AiOutlineHome, AiFillHome } from "react-icons/ai";
 import LogoImg from "../../images/Logo.png";
+import { Link } from "react-router-dom";
 import {
   BiSearch,
   BiTv,
@@ -96,7 +97,7 @@ function Sidebar() {
       >
         <div className="SidebarGroup2">
           {menuItemsArray.map((item, index) => (
-            <a href={item.redirect}>
+            <Link to={item.redirect}>
               <div
                 className="Sidebarpair"
                 key={index}
@@ -106,7 +107,7 @@ function Sidebar() {
                 <div className="SidebarIconContainer">{item.icon}</div>
                 <div className="SidebarText">{item.name}</div>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
